@@ -6,9 +6,12 @@ from backend_api import db, app
 @pytest.fixture
 def testing_client(scope='module'):
     db.create_all()
-    recipe = Recipe(name='test', ingredients='test', instructions='test', favorite=False, rating=0)
+    recipe = Recipe('test', 'test', 'test', False, 2)
     db.session.add(recipe)
     db.session.commit()
-    yield app.test_client()
+    with app.test_client() as testing_client:
+        yield testing_client
+    
     db.drop_all()
+
 
