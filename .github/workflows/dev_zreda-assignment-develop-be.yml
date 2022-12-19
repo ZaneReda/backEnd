@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'zreda-assignment-develop-BE'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_55E70FFD76A94BBB94F84E1E8BFA4DA8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3F7CBC11A95447B9A3A23094810DD18 }}
